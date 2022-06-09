@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="flex flex-col m-4">
+      <div className="flex flex-col">
         <Header />
         <SearchBox />
       </div>

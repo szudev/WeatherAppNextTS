@@ -6,7 +6,7 @@ export const weatherUrl =
 export const searchWeatherUrl =
   "https://weatherapi-com.p.rapidapi.com/search.json?q=";
 
-export const AxiosOption = {
+export const fetchOption = {
   method: "GET",
   headers: {
     "X-RapidAPI-Host": process.env.RAPIDAPI_WEATHER_API_HOST,
