@@ -6,7 +6,6 @@ import CustomTooltip from "@/common/tooltip";
 export default function WeatherLocation() {
   const response = trpc.useQuery(["get-default-weather"]);
   if (response.isLoading) return null;
-  console.log(response.data);
   return (
     <section className={"flex flex-col m-4 items-center gap-4"}>
       <div className="text-7xl">{response.data?.location?.name}</div>
