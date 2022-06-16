@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { fetcher } from "../services/fetcher";
-import { SearchData } from "../ts/interfaces";
 
 function SearchBox() {
   return (

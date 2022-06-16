@@ -1,16 +1,14 @@
 import * as trpc from "@trpc/server";
 import { z } from "zod";
+import { fetchOption } from "@/services/rapidapi";
 
-export const appRouter = trpc.router().query("hello", {
-  input: z
-    .object({
-      text: z.string().nullish(),
-    })
-    .nullish(),
-  resolve({ input }) {
-    return {
-      greeting: `hello ${input?.text ?? "world"}`,
-    };
+export const appRouter = trpc.router().query("get-default-weather", {
+  async resolve() {
+    const weather = await fetch(
+      `https://weatherapi-com.p.rapidapi.com/forecast.json?q=Santiago`,
+      fetchOption
+    );
+    return weather.json();
   },
 });
 

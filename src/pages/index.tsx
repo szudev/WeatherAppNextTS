@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import SearchBox from "../components/SearchBox";
+import WeatherLocation from "@/components/WeatherLocation";
 import Header from "../layout/Header";
 
 const Home: NextPage = () => {
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
       <div className="flex flex-col">
         <Header />
         <SearchBox />
+        <WeatherLocation />
       </div>
     </div>
   );
